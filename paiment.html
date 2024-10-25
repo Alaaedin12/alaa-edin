@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>tp flex</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.bundle.js.map"></script>
+    </head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Paiement</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="traiter-paiement.php" method="POST">
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom Complet :</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+ 
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email :</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+ 
+                    <div class="mb-3">
+                        <label for="adresse" class="form-label">Adresse de Facturation :</label>
+                        <input type="text" class="form-control" id="adresse" name="adresse" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="carte" class="form-label">Numéro de Carte Bancaire :</label>
+                        <input type="text" class="form-control" id="carte" name="carte" maxlength="16" required>
+                    </div>
+ 
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="expiration" class="form-label">Date d'Expiration (MM/AA) :</label>
+                            <input type="text" class="form-control" id="expiration" name="expiration" maxlength="5" placeholder="MM/AA" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cvv" class="form-label">CVV :</label>
+                            <input type="text" class="form-control" id="cvv" name="cvv" maxlength="3" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Payer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
